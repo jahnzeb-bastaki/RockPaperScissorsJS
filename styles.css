@@ -43,7 +43,7 @@ header:hover{
   background-color: white;
   border: 5px solid black;
   box-shadow: 2px 2px 5px black;
-  transition: all 0.15s ease-in;
+  transition: all 0.1s ease-in;
   border-radius: 10px;
   flex: 1;
 }

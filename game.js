@@ -53,6 +53,6 @@ buttons.forEach(btn => btn.addEventListener('click', playRound,{
 }))
 
 function playRound(event){
-  console.log(event.target.classList.value);
+  console.log(this);
 }
 
