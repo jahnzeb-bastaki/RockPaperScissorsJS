@@ -13,7 +13,7 @@ function getComputerChoice(){
 const playerScore = 0;
 const computerScore = 0;
 
-function playRound(playerSelection, computerSelection){
+function round(playerSelection, computerSelection){
   playerSelection = playerSelection.toLowerCase();
   
   if(playerSelection == computerSelection){
@@ -45,5 +45,8 @@ function playRound(playerSelection, computerSelection){
   }
 }
 
+const buttons = document.querySelectorAll('button');
+console.log(buttons);
 
+buttons.forEach(btn => btn.addEventListener('click', playRound))
 
