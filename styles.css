@@ -1,4 +1,68 @@
+*{
+  font-family: 'Courier New', Courier, monospace;
+}
 
 body{
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+header{
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+header{
+  transition: all 1s ease;
+}
+header:hover{
+  color: rgb(0, 44, 238);
+  font-size: x-large;
+}
+
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.images-container{
+  padding: 1em;
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+.images-container button{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border: 5px solid black;
+  box-shadow: 2px 2px 5px black;
+  transition: all 0.5s ease;
+  border-radius: 10px;
+}
+
+.images-container button:hover {
+  transform: scale(1.1);
+}
+
+button img{
+  width: 90%;
+}
+
+button p{
+  font-size: 20px;
+  font-weight: 550;
+}
+
+
+
+
+
+
