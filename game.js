@@ -35,22 +35,3 @@ function playRound(playerSelection, computerSelection){
   }
 }
 
-function game(){
-  let computerScore = 0;
-  let playerScore = 0;
-  while(computerScore != 5 && playerScore != 5){
-    let user = prompt("Enter Player Choice(\"rock\", \"paper\", or \"scissor\")");
-    let result = playRound(user, getComputerChoice());
-    if(result.includes("Win")){
-      playerScore++;
-    } else {
-      computerScore++;
-    }
-
-    console.log(result);
-    console.log(`Player Score: ${playerScore} \tComputer Score: ${computerScore}`);
-  }
-  playerScore == 5 ? console.log("Player Wins!") : console.log("Computer Wins!");
-}
-
-game();
