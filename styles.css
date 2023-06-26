@@ -13,11 +13,9 @@ body{
 header{
   margin-top: 1em;
   margin-bottom: 1em;
-}
-
-header{
   transition: all 1s ease;
 }
+
 header:hover{
   color: rgb(0, 44, 238);
   font-size: x-large;
@@ -28,6 +26,7 @@ header:hover{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .images-container{
@@ -44,12 +43,20 @@ header:hover{
   background-color: white;
   border: 5px solid black;
   box-shadow: 2px 2px 5px black;
-  transition: all 0.5s ease;
+  transition: all 0.15s ease-in;
   border-radius: 10px;
+  flex: 1;
 }
 
 .images-container button:hover {
   transform: scale(1.1);
+  border-color: rgb(0, 44, 238);
+  box-shadow: 4px 4px 5px rgb(20, 20, 126);
+}
+
+.images-container button:active {
+  box-shadow: none;
+  transform: scale(1);
 }
 
 button img{
@@ -59,6 +66,23 @@ button img{
 button p{
   font-size: 20px;
   font-weight: 550;
+}
+
+.info-container{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.info-container p{
+  font-size: 24px;
+  font-weight: bold;
+  transition: all 0.5s ease;
+}
+
+.info-container p:hover {
+  color:rgb(0, 44, 238);
+  transform: scale(1.1);
 }
 
 
