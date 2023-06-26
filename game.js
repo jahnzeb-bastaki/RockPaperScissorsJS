@@ -48,5 +48,11 @@ function round(playerSelection, computerSelection){
 const buttons = document.querySelectorAll('button');
 console.log(buttons);
 
-buttons.forEach(btn => btn.addEventListener('click', playRound))
+buttons.forEach(btn => btn.addEventListener('click', playRound,{
+  
+}))
+
+function playRound(event){
+  console.log(event.target.classList.value);
+}
 
