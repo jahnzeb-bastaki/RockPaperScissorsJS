@@ -81,12 +81,12 @@ function playRound(event){
     });
 
     if(playerScore == 5){
-      promptHTML.innerHTML = "You WON the 5 round game, now do a chicken dance";
+      promptHTML.innerHTML = "You WON, now do a chicken dance";
       newbtn.innerHTML = "I did the chicken dance";
       container.appendChild(newbtn);
     } else {
-      promptHTML.innerHTML = "You LOST! Go in the corner and cry";
-      newbtn.innerHTML = "I cried in the corner";
+      promptHTML.innerHTML = "You LOST, now chickens will attack you";
+      newbtn.innerHTML = "I beat the chickens";
       container.appendChild(newbtn);
     }
   }
