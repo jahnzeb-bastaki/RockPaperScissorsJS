@@ -45,12 +45,12 @@ function round(playerSelection, computerSelection){
   }
 }
 
-const buttons = document.querySelectorAll('button');
+let newbtn = document.createElement('button');
+newbtn.classList.add("chicken-button");
+const buttons = document.querySelectorAll('.btn');
 console.log(buttons);
 
-buttons.forEach(btn => btn.addEventListener('click', playRound,{
-  
-}))
+buttons.forEach(btn => btn.addEventListener('click', playRound,));
 
 function playRound(event){
   let playerValue = '';
@@ -63,8 +63,33 @@ function playRound(event){
   }
   
   let result = round(playerValue, getComputerChoice());
+
+  let computerHTML = document.getElementById("computer");
+  let playerHTML = document.getElementById("player");
+  let promptHTML = document.getElementById("prompt");
+  let container = document.querySelector('.container');
+  computerHTML.innerHTML = `Computer Score: ${computerScore}`;
+  playerHTML.innerHTML = `Player Score: ${playerScore}`;
+  promptHTML.innerHTML = result;
   
+  if(playerScore == 5 || computerScore == 5){
+    buttons.forEach(btn => {
+      btn.disabled = true;
+      btn.style.borderColor = 'grey';
+      btn.classList.add('disabled');
+    });
 
-
+    if(playerScore == 5){
+      promptHTML.innerHTML = "You WON the 5 round game, now do a chicken dance";
+      newbtn.innerHTML = "I did the chicken dance";
+      container.appendChild(newbtn);
+    } else {
+      promptHTML.innerHTML = "You LOST! Go in the corner and cry";
+      newbtn.innerHTML = "I cried in the corner";
+      container.appendChild(newbtn);
+    }
+  }
 }
+
+
 

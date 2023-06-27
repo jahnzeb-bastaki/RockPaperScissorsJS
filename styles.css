@@ -1,5 +1,6 @@
 *{
   font-family: 'Courier New', Courier, monospace;
+  padding: 0px;
 }
 
 body{
@@ -48,6 +49,7 @@ header:hover{
   flex: 1;
 }
 
+
 .images-container button:hover {
   transform: scale(1.1);
   border-color: rgb(0, 44, 238);
@@ -85,8 +87,25 @@ button p{
   transform: scale(1.1);
 }
 
+#prompt{
+  font-size: 24px;
+  font-weight: bold;
+  transition: all 0.5s ease; 
+}
 
+#prompt:hover{
+  color: rgb(0, 44, 238);
+  transform: scale(1.1);
+}
 
+.disabled {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+.chicken-button{
+  padding: .5em;
+}
 
 
 
