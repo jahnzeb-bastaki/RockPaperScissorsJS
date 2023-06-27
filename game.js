@@ -46,6 +46,10 @@ function round(playerSelection, computerSelection){
 }
 
 let newbtn = document.createElement('button');
+let container = document.querySelector('.container');
+let promptHTML = document.getElementById("prompt");
+let computerHTML = document.getElementById("computer");
+let playerHTML = document.getElementById("player");
 newbtn.classList.add("chicken-button");
 const buttons = document.querySelectorAll('.btn');
 console.log(buttons);
@@ -64,10 +68,8 @@ function playRound(event){
   
   let result = round(playerValue, getComputerChoice());
 
-  let computerHTML = document.getElementById("computer");
-  let playerHTML = document.getElementById("player");
-  let promptHTML = document.getElementById("prompt");
-  let container = document.querySelector('.container');
+  console.log(promptHTML.innerHTML);
+
   computerHTML.innerHTML = `Computer Score: ${computerScore}`;
   playerHTML.innerHTML = `Player Score: ${playerScore}`;
   promptHTML.innerHTML = result;
@@ -75,7 +77,6 @@ function playRound(event){
   if(playerScore == 5 || computerScore == 5){
     buttons.forEach(btn => {
       btn.disabled = true;
-      btn.style.borderColor = 'grey';
       btn.classList.add('disabled');
     });
 
@@ -91,5 +92,22 @@ function playRound(event){
   }
 }
 
+newbtn.addEventListener('click', e => {
+  if(e.target.innerHTML.includes('I')){
+    promptHTML.innerHTML = "Wanna play again?";
+    newbtn.innerHTML = " • _ • ";
+  } else {
+    buttons.forEach(btn => {
+      btn.classList.remove('disabled');
+      btn.disabled = false;
+    });
+    playerScore = 0;
+    computerScore = 0;
+    computerHTML.innerHTML = `Computer Score: ${computerScore}`;
+    playerHTML.innerHTML = `Player Score: ${playerScore}`;
+    container.removeChild(newbtn);
+    promptHTML.innerHTML = '';
+  }
+});
 
 
