@@ -10,8 +10,8 @@ function getComputerChoice(){
 }
 
 // Player Score Variables
-const playerScore = 0;
-const computerScore = 0;
+let playerScore = 0;
+let computerScore = 0;
 
 function round(playerSelection, computerSelection){
   playerSelection = playerSelection.toLowerCase();
@@ -53,6 +53,18 @@ buttons.forEach(btn => btn.addEventListener('click', playRound,{
 }))
 
 function playRound(event){
-  console.log(this);
+  let playerValue = '';
+  if(this.classList.contains("rock")){
+    playerValue = "rock";
+  } else if(this.classList.contains("paper")){
+    playerValue = "paper";
+  } else {
+    playerValue = "scissor";
+  }
+  
+  let result = round(playerValue, getComputerChoice());
+  
+
+
 }
 
